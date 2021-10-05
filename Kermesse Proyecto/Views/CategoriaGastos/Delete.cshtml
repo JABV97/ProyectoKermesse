@@ -1,0 +1,49 @@
+﻿@model Kermesse_Proyecto.Models.CategoriaGasto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Estas seguro que quieres eliminar el registro?</h3>
+<div>
+    <h4>Categoria Gasto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-outline-dark" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

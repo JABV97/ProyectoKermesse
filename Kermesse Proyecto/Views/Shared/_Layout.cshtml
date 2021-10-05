@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            @Html.ActionLink("Proyecto Kermesse", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    @Html.ActionLink("Inicio", "Index", "Home" , new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("About", "About", "Home" , new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Modulos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>@Html.ActionLink("Categoria Gastos", "Index", "CategoriaGastos" , new { area = "" }, new { @class = "dropdown-item" })</li>
+                              <li>@Html.ActionLink("Parroquia", "Index", "Parroquias", new { area = "" }, new { @class = "dropdown-item" })</li>
+                              <li>@Html.ActionLink("Usuario", "Index", "Usuarios", new { area = "" }, new { @class = "dropdown-item" })</li>
+                              <li>@Html.ActionLink("Opciones", "Index", "Opciones", new { area = "" }, new { @class = "dropdown-item" })</li>
+                              <li>@Html.ActionLink("Categoria Productos", "Index", "CategoriaProductos", new { area = "" }, new { @class = "dropdown-item" })</li>
+                    </ul>
+                </li>
+            </ul>       
+        </div>
+        </div>
+</nav>
+    <!--  <div class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  @Html.ActionLink("Proyecto Kermesse", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <li class="dropdown open">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                              Modulos <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li>@Html.ActionLink("Categoria Gastos", "Index", "CategoriaGastos")</li>
+                              <li>@Html.ActionLink("Parroquia", "Index", "Parroquias")</li>
+                              <li>@Html.ActionLink("Usuario", "Index", "Usuarios")</li>
+                              <li>@Html.ActionLink("Opciones", "Index", "Opciones")</li>
+                              <li>@Html.ActionLink("Categoria Productos", "Index", "CategoriaProductos")</li>
+                          </ul>
+                      </li>
+                      <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                      <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                      <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                  </ul>
+              </div>
+          </div>
+      </div> -->
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
