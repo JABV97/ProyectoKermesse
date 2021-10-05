@@ -11,7 +11,8 @@ namespace Kermesse_Proyecto.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class ListaPrecio
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,13 +20,27 @@ namespace Kermesse_Proyecto.Models
         {
             this.ListaPrecioDet = new HashSet<ListaPrecioDet>();
         }
-    
+
+        [Display(Name = "Codigo")]
+        
         public int idListaPrecio { get; set; }
+
+        [Display(Name = "Kermesse")]
+        [Required]
         public Nullable<int> kermesse { get; set; }
+
+        [Display(Name = "Nombre")]
+        [Required, StringLength(100)]
         public string nombre { get; set; }
+
+        [Display(Name = "Descripcion")]
+        [Required, StringLength(100)]
         public string descripcion { get; set; }
+
+        [Display(Name = "Estado")]
+        [Required]
         public int estado { get; set; }
-    
+
         public virtual Kermesse Kermesse1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ListaPrecioDet> ListaPrecioDet { get; set; }

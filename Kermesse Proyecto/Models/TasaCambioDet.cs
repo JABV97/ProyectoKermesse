@@ -11,13 +11,27 @@ namespace Kermesse_Proyecto.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class TasaCambioDet
     {
+        [Display(Name = "Codigo")]
         public int idTasaCambioDet { get; set; }
+
+        [Display(Name = "Tasa Cambio")]
+        [Required]
         public int tasaCambio { get; set; }
+
+        [Display(Name = "Fecha")]
+        [Required, DataType(DataType.DateTime)]
         public System.DateTime fecha { get; set; }
+
+        [Display(Name = "Tipo de Cambio")]
+        [Required]
         public decimal tipoCambio { get; set; }
+
+        [Display(Name = "Estado")]
+        [Required]
         public int estado { get; set; }
     
         public virtual TasaCambio TasaCambio1 { get; set; }

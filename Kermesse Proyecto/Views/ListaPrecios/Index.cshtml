@@ -8,7 +8,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo Registro", "Create")
 </p>
 <table class="table">
     <tr>
@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.Kermesse1.nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idListaPrecio }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idListaPrecio }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idListaPrecio })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idListaPrecio }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idListaPrecio }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idListaPrecio })
         </td>
     </tr>
 }

@@ -8,7 +8,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Moneda", "Create")
 </p>
 <table class="table">
     <tr>
@@ -36,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.estado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idMoneda }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idMoneda }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idMoneda })
+            @Html.ActionLink("Editar", "Edit", new { id=item.idMoneda }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.idMoneda }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.idMoneda })
         </td>
     </tr>
 }
